@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- #region Styles -->
+  <style>
+    @font-face {
+      font-family: Merriweather-Italic;
+      src: url(Fonts\Merriweather-Italic.otf);
+    }
+    :root {
+      --main-font: arial black;
+      --main-font-light: inter light, arial;
+      --main-font-regular: inter, arial;
+      --main-font-size-small: 14px;
+      --main-font-size-regular: 16px;
+      --main-font-size-large: 35px;
+    }
+    body {
+      background: #bdcbcf;
+      font-family: var(--main-font);
+      display: flexbox;
+      flex-flow: column wrap;
+      margin: 0;
+    }
+
+    #mappe {
+      width: 111em;
+      height: 68em;
+      z-index: -1;
+      background: #555;
+      background: linear-gradient(
+        90deg,
+        rgba(48, 47, 45, 1) 0%,
+        rgba(0, 0, 0, 1) 30%,
+        rgba(0, 0, 0, 1) 45%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(62, 59, 59, 1) 51%,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      position: absolute;
+      right: 3.5vw;
+      top: 1vh;
+      border-radius: 15px;
+      padding: 0;
+    }
+    article {
+      width: 48.25em;
+      height: 62.5em;
+      padding: 1.5em;
+      margin: 2em;
+      background: #f8f8fa;
+      box-shadow: -3px 3px 15px 5px rgba(50, 50, 50, 0.5);
+      position: absolute;
+    }
+    #page0 {
+      z-index: 3;
+      font-family: var(--main-font-light);
+      font-size: var(--main-font-size-regular);
+      transform: rotate(-1deg);
+    }
+    .anschreiben {
+      width: 72ch;
+      margin-left: 2.5em;
+    }
+    #page0 .unterschrift {
+      margin-left: 0;
+      margin-top: 0;
+    }
+    #page1 {
+      z-index: 2;
+      /* transition: 0.5s ease-out; */
+    }
+    #page2 {
+      transform: rotate(2deg);
+      z-index: 1;
+    }
+    .bulletpoints {
+      font-family: var(--main-font-regular);
+      padding-left: 25px;
+    }
+    .sub-bulletpoints {
+      font-family: var(--main-font-light);
+      font-size: var(--main-font-size-small);
+      padding-left: 50px;
+    }
+    .bulletpoints li {
+      font-family: var(--main-font-light);
+      font-size: var(--main-font-size-small);
+      padding-left: 25px;
+      list-style: none;
+    }
+    #header-table {
+      padding: 25px;
+      padding-bottom: 2.5em;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .jobtitel {
+      padding: 5px;
+      display: flex;
+      margin-right: auto;
+    }
+    .main-table {
+      margin-left: auto;
+      margin-right: auto;
+      width: 68ch;
+    }
+    small {
+      width: 150px;
+      padding-top: 2.5px;
+      font-family: var(--main-font-regular);
+    }
+    strong {
+      flex-grow: 0;
+      max-width: 75%;
+      font-family: var(--main-font-regular);
+    }
+    h1 {
+      margin-left: 15px;
+    }
+    .unterschrift {
+      width: 250px;
+      margin-left: 100px;
+      margin-top: 100px;
+      font-family: var(--main-font-light);
+    }
+    .unterschrift img {
+      width: 100%;
+    }
+    .pagenumber {
+      font-size: var(--main-font-size-small);
+      font-family: var(--main-font-light);
+      position: absolute;
+    }
+    .photo {
+      position: absolute;
+      width: 150px;
+      height: auto;
+      padding: 5px;
+      box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.5);
+      transform: rotate(5deg);
+      right: 5%;
+      top: 8px;
+    }
+    .photo img {
+      width: 100%;
+    }
+    #paperclip {
+      width: 50px;
+      position: absolute;
+      transform: rotate(15deg);
+      right: 100px;
+      top: -35px;
+    }
+  </style>
+  <!-- #endregion Styles -->
+  <body>
+    <div id="mappe"></div>
+    <!-- #region anschreiben -->
+    <article id="page0">
+      <div class="pagenumber">1</div>
+      <div class="anschreiben">
+        <strong id="betreff"
+          >Bewerbung um einen Ausbildungsplatz als Fachinformatiker der
+          Fachrichtung Anwendungsentwicklung, Ausbildungsbeginn am 01. September
+          2021</strong
+        >
+
+        <p>Sehr geehrte Frau Steinke,</p>
+        <p>
+          in den letzten zehn Jahren hat mich meine berufliche Reise durch die
+          Küchen Deutsch-lands, Australiens und Neuseelands geführt, mir
+          Einblicke in fremde Kulturen ermöglicht und mich regelmäßig vor neue
+          Herausforderungen gestellt. Eine davon ist die Angabe von Allergenen
+          und Zusatzstoffen auf Speisekarten, welche ich durch eine
+          Softwarelösung automatisieren wollte.
+        </p>
+        <p>
+          in den letzten zehn Jahren hat mich meine berufliche Reise durch die
+          Küchen Deutsch-lands, Australiens und Neuseelands geführt, mir
+          Einblicke in fremde Kulturen ermöglicht und mich regelmäßig vor neue
+          Herausforderungen gestellt. Eine davon ist die Angabe von Allergenen
+          und Zusatzstoffen auf Speisekarten, welche ich durch eine
+          Softwarelösung automatisieren wollte.
+        </p>
+        <p>
+          Aus diesem Grund habe ich zu Beginn diesen Jahres angefangen mich mit
+          der Softwareentwicklung in C# zu beschäftigen. Zehn Monate, fünf
+          Anwendungen und zwei Bücher später, entwickle ich immer noch voller
+          Begeisterung neue Programme. Mein letztes Projekt
+          „BackpackersWorldData“ ist eine Webseite, die dem Nutzer Länderdaten
+          in HTML zur Verfügung stellt. Realisiert habe ich dies durch die
+          asynchrone API-Abfrage in JavaScript.
+        </p>
+        <p>
+          In meiner jetzigen Position als Küchenleiter bin ich für die
+          Einhaltung des Budgets für Lebensmittel und Küchengeräte
+          verantwortlich. Dieses Jahr konnte ich die Lebens-mittelkosten von
+          ungefähr 1,45 € je Portion auf unter 1,10 € senken. Dies gelang mir
+          durch regelmäßige Absprachen mit Lieferanten sowie die Anschaffung von
+          modernen Geräten. Die Speisepläne stimme ich mit den Kollegen aus
+          anderen Fachbereichen ab.
+        </p>
+        <p>
+          Nach zehn Jahren in der Gastronomie ist es an der Zeit auf Wiedersehen
+          zu sagen und sich neuen Themen zu widmen. Dabei kann ich mir sehr gut
+          vorstellen meine Kenntnisse in einem Internationalen Unternehmen
+          einzubringen. Als Marktführer für Unternehmens Software bietet SAP
+          geradezu die Perfekte Möglichkeit.
+        </p>
+        <p>
+          Gerne beantworte ich offene Fragen bei einem persönlichen Kennenlernen
+          sowie telefonisch und freue mich auf eine Einladung.
+        </p>
+        <p>Mit freundlichen Grüßen</p>
+
+        <div class="unterschrift">
+          <p class="datum">Vaihingen, den</p>
+          <img src="Medien\unterschrift.png" alt="sign" />
+        </div>
+        <p>Jacek Langer</p>
+      </div>
+    </article>
+    <!-- #endregion -->
+    <!-- #region Lebenslauf page1 -->
+    <article id="page1">
+      <div class="photo">
+        <img src="/Medien/Jacek Langer.jpg" alt="bewerbungsphoto" />
+        <img
+          id="paperclip"
+          src="/Medien/NicePng_paper-clips-png_663731.png"
+          alt="paperclip"
+        />
+      </div>
+
+      <div class="pagenumber">2</div>
+      <div class="header">
+        <table id="header-table">
+          <tr>
+            <td style="font-size: var(--main-font-size-large)">Jacek Langer</td>
+          </tr>
+          <tr>
+            <td>Stumppweg 21 | 71665 Vaihingen an der Enz</td>
+          </tr>
+          <tr>
+            <td>Mobil +49163/9746080</td>
+          </tr>
+          <tr>
+            <td>Mail Jacek.Langer@outlook.de</td>
+          </tr>
+          <tr>
+            <td>GitHub https://github.com/JackLanger</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="job_experience">
+        <table class="main-table">
+          <!-- #region Programmier Erfahrung -->
+          <td>
+            <h1>Programmierkenntnisse</h1>
+            <hr />
+          </td>
+          <tr>
+            <td class="jobtitel">
+              <small>02/2020 - heute </small>
+              <strong>Selbststudium der Softwareentwicklung</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="bulletpoints">
+              BackpackersWorldData
+              <tr>
+                <td class="sub-bulletpoints">
+                  Website zum Nachschlagen von Länderdaten
+                </td>
+              </tr>
+            </td>
+            <td class="bulletpoints">
+              TaskHub
+              <tr>
+                <td class="sub-bulletpoints">
+                  Anwendung zum verwalten von verwalten von Aufgaben,
+                  geschrieben in C#
+                </td>
+              </tr>
+            </td>
+            <td class="bulletpoints">
+              Finanzplaner
+              <tr>
+                <td class="sub-bulletpoints">
+                  Win-Forms Kalkulationstool zur Ermittlung von Umsätzen und
+                  Kosten
+                </td>
+              </tr>
+            </td>
+          </tr>
+          <!-- #endregion -->
+          <!-- #region Berufserfahrung -->
+          <td>
+            <h1>Berufserfahrung</h1>
+            <hr />
+          </td>
+          <!-- #endregion -->
+          <!-- #region küchenleitung Pforzheim -->
+          <tr>
+            <td class="jobtitel">
+              <small>05/2019 - heute</small>
+              <strong>Küchenleiter der Kindertagestätte Oststadtpark</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="bulletpoints">
+              <li>
+                Koordination der Zusammenarbeit im Haus und mit externen
+                Partnern
+              </li>
+              <li>Planung des Tagesgeschäfts inklusive Speiseplangestaltung</li>
+              <li>Bedarfskalkulation und Bestellung von Lebensmitteln</li>
+              <li>Einhaltung und Umsetzung von Hygienerichtlinien</li>
+            </td>
+          </tr>
+          <!-- #endregion -->
+          <!-- #region neuorientierung-->
+          <tr>
+            <td class="jobtitel">
+              <small>04/2018 - 04/2019</small>
+              <strong
+                >Berufliche Neuorientierung und aktive Bewerbungsphase</strong
+              >
+            </td>
+          </tr>
+          <!-- #endregion -->
+          <!-- #region souschef Goldenes Lamm -->
+          <tr>
+            <td class="jobtitel">
+              <small>08/2017 – 03/2018</small>
+              <strong
+                >Stellvertretende Küchenleitung, Das Goldene Lamm, Aalen</strong
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="bulletpoints">
+              <li>Koordination und Anleitung unterstellter Küchenmitglieder</li>
+              <li>
+                Erstellung und Kalkulation von Speiseplänen in Absprache mit dem
+                Küchenleiter
+              </li>
+              <li>
+                Verwaltung des Lebensmittellagers inklusive der Bestellung von
+                Lebensmitteln
+              </li>
+              <li>Einhaltung und Umsetzung von Hygienerichtlinien</li>
+            </td>
+          </tr>
+          <!-- #endregion -->
+          <!-- #region Ausland -->
+          <tr>
+            <td class="jobtitel">
+              <small>12/2013 – 04/2017</small>
+              <strong
+                >Auslandsaufenthalt in Australien, Neuseeland und
+                Südostasien</strong
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="bulletpoints">
+              <li>
+                Stellvertretende Küchenleitung, Fools of Desire, Rangiora
+                Neuseeland
+              </li>
+              <li>Alleinkoch, Breeze Bar, Airlie Beach Australien</li>
+              <li>
+                Stellvertretende Küchenleitung, Bernardis on Crown, Wollongong
+                Australien
+              </li>
+              <li>Postenchef, Cakes and Ale Sorrento, Sorrento Australien</li>
+            </td>
+          </tr>
+          <!-- #endregion -->
+          <!-- #region post ausbildung -->
+          <tr>
+            <td class="jobtitel">
+              <small>08/2013 – 11/2013</small>
+              <strong>Postenchef, Renaissance Hotel, Karlsruhe</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>08/2012 – 08/2013</small>
+              <strong>Koch, Ibis Karlsruhe Hauptbahnhof, Karlsruhe</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>06/2012 – 07/2012</small>
+              <strong>Betriebsleiter, Café Bleu, Karlsruhe</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>02/2012 – 05/2012</small>
+              <strong>Jungkoch, Alte Schmiede GmbH, Karlsruhe</strong>
+            </td>
+          </tr>
+          <!-- #endregion -->
+        </table>
+      </div>
+    </article>
+    <!-- #endregion -->
+    <!-- #region page2 -->
+    <article id="page2">
+      <div class="pagenumber">3</div>
+      <div>
+        <table class="main-table">
+          <!-- #region Ausbildung -->
+          <td>
+            <h1>Ausbildung</h1>
+            <hr />
+          </td>
+
+          <tr>
+            <td class="jobtitel">
+              <small>08/2009 – 02/2012</small>
+              <strong>Ausbildung zum Koch im Residenz Hotel Karlsruhe</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>10/2008 - 06/2009</small>
+              <strong
+                >Ausbildung zum Bauzeichner bei der W5-Planungsgesellschaft in
+                Tübingen</strong
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>11/2007 – 07/2008</small>
+              <strong
+                >Zivildienst an der Helfenstein Klinik in Geislingen an der
+                Steige</strong
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>09/2003 – 07/2007</small>
+              <strong
+                >Fachhochschulreife am Berufsschulzentrum Öde in
+                Göppingen</strong
+              >
+            </td>
+          </tr>
+          <!-- #endregion -->
+          <!-- #region Fertigkeiten -->
+          <td>
+            <h1>Fertigkeiten und Interessen</h1>
+            <hr />
+          </td>
+          <tr>
+            <td class="jobtitel">
+              <small>Technologien</small>
+              <strong>C#, JavaScript, SQL, HTML, CSS</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>Sprachen</small>
+              <strong
+                >Deutsch (Muttersprache), Englisch (fließend), Polnisch
+                (Grundkenntnisse), Spanisch (Grundkenntnisse)</strong
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>Fertigkeiten</small>
+              <strong
+                >WPF-Entwicklung, MVVM,EntityFramework, Kostenkontrolle,
+                Preiskalkulation</strong
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="jobtitel">
+              <small>EDV</small>
+              <strong
+                >MS-Office, MS-SQL-Server, OpenOffice, Affinity, Unity3D
+              </strong>
+            </td>
+          </tr>
+          <!-- #endregion -->
+        </table>
+      </div>
+
+      <div class="unterschrift">
+        <p class="datum">Vaihingen, den</p>
+        <img src="Medien\unterschrift.png" alt="sign" />
+      </div>
+    </article>
+    <br />
+    <!-- #endregion  -->
+    <script>
+      const date = document.querySelector(".datum");
+      const months = [
+        "Januar",
+        "Februar",
+        "März",
+        "April",
+        "Mai",
+        "Juni",
+        "Juli",
+        "August",
+        "September",
+        "Oktober",
+        "November",
+        "Dezember",
+      ];
+      var dateToday = new Date();
+      var day = String(dateToday.getDate()).padStart(2, "0");
+      var year = dateToday.getFullYear();
+      var month = months[dateToday.getMonth()];
+
+      date.innerHTML += ` ${day}. ${month} ${year} `;
+
+      const page1 = document.querySelector("#page1");
+      var isClicked = false;
+      var client = {
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight,
+      };
+
+      var pages = [
+        document.getElementById("page0"),
+        document.getElementById("page1"),
+        document.getElementById("page2"),
+      ];
+      const mappe = document.getElementById("mappe");
+
+      window.addEventListener("resize", setupPages());
+      document.body.onload = setupPages;
+
+      function setupPages() {
+        if (client.width < 1900) {
+          for (let p in pages) {
+            pages[p].style.right = "3.5vw";
+
+            pages[p].onclick = () => {
+              let random = Math.random() * 3;
+              if (pages[p].style.zIndex == 3) {
+                return;
+              } else {
+                pages[p].style.zIndex = 3;
+                pages[p].style.right = "3.5vw";
+
+                for (let i = 0; i < pages.length; i++) {
+                  if (pages[i] === pages[p]) {
+                    pages[p].style.zIndex = 2;
+                    continue;
+                  }
+                  pages[i].style.zIndex--;
+                  if (pages[i].style.zIndex < 1) {
+                    pages[i].style.zIndex = 1;
+                  }
+                  pages[i].style.right = "8vw";
+                }
+              }
+            };
+          }
+        } else {
+          for (let i = 0; i < pages.length; i++) {
+            if (i == 0) {
+              pages[i].style.marginLeft = "6%";
+              continue;
+            }
+            pages[i].style.marginLeft = "52%";
+          }
+
+          page1.onclick = () => {
+            if (!isClicked) {
+              page1.style.marginLeft = "6%";
+              isClicked = true;
+              page1.style.zIndex = 4;
+            } else {
+              page1.style.marginLeft = "52%";
+              isClicked = false;
+            }
+          };
+        }
+      }
+    </script>
+  </body>
+</html>
